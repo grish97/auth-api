@@ -8,12 +8,12 @@ export const createGroupSchema = Joi.object<IGroupBody>({
   creatorId: Joi.string().required(),
 });
 
-export const updateGroupSchema = Joi.object<Partial<IGroupBody>>({
+export const updateGroupSchema = Joi.object<IGroupBody>({
   name: Joi.string().required(),
 });
 
 export default function validateGroup<T = IGroupBody>(schema: ObjectSchema<T>) {
-  return async (payload: Partial<IGroupBody>) => {
+  return async (payload: Partial<IGroupBody>): Promise<T> => {
     return await schema.validateAsync(payload, {
       abortEarly: true,
     });

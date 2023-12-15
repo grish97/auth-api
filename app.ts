@@ -1,11 +1,11 @@
 import express, { NextFunction, Request, Response } from "express";
 import cookieParser from "cookie-parser";
 import cors from "cors";
-import * as ProccessEvent from "./src/services/ProccessEvent";
+import * as ProcessEvent from "./src/services/ProcessEvent";
 import AppError from "./src/services/AppError";
 
-ProccessEvent.unhandledRejection();
-ProccessEvent.uncaughtRejection();
+ProcessEvent.unhandledRejection();
+ProcessEvent.uncaughtRejection();
 
 import envConfig from "./src/configs/envConfig";
 import { errorHandler } from "./src/middleware/errorHandler";

@@ -1,7 +1,9 @@
-import mongoose from "mongoose";
+import mongoose, { Model, Schema } from "mongoose";
 import { signAccessToken, signRefreshToken } from "../middleware/helpers";
 
-const User = new mongoose.Schema(
+import { IUserModelData } from "../types/user";
+
+const User = new Schema<IUserModelData, Model<IUserModelData>>(
   {
     username: String,
     email: String,

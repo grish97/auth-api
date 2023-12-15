@@ -11,6 +11,12 @@ export interface IMessageModelData {
     isSeen: boolean;
     seenDate: Date | null;
   };
-  groupId: string;
-  creatorId: string;
+  groupId: {
+    type: string;
+    ref: string;
+  };
+  creatorId: {
+    type: string;
+    ref: string;
+  };
 }

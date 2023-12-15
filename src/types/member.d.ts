@@ -1,4 +1,10 @@
 export interface IMemberModelData {
-  groupId: string;
-  userId: string;
+  groupId: {
+    type: string;
+    ref: string;
+  };
+  userId: {
+    type: string;
+    ref: string;
+  };
 }

@@ -7,7 +7,7 @@ export const createMessageSchema = Joi.object<IMessageBody>({
   toId: Joi.string(),
 });
 
-export const updateMessageSchema = Joi.object<Partial<IMessageBody>>({
+export const updateMessageSchema = Joi.object<IMessageBody>({
   content: Joi.string().required(),
 });
 

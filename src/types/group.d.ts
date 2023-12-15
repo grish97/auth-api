@@ -10,7 +10,10 @@ export interface IGroupModelData {
   name: string | null;
   picture: string | null;
   isPrivate: boolean;
-  creatorId: string;
+  creatorId: {
+    type: string;
+    ref: string;
+  };
 }
 
 export type TConversation = {
